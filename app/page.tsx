@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ButtonLink,
   CTASection,
@@ -73,105 +74,19 @@ const whoWeHelp = [
   },
 ];
 
-function PlanningDeskVisual() {
+function HeroWorkspaceImage() {
   return (
     <div className="relative animate-fade-up [animation-delay:120ms]">
-      <div className="absolute -right-12 -top-10 h-56 w-56 rounded-full bg-sky/20 blur-3xl" />
-      <div className="absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-green/20 blur-3xl" />
-      <div className="relative rounded-[2rem] border border-white/70 bg-white/80 p-3 shadow-soft backdrop-blur sm:p-4">
-        <div className="relative min-h-[34rem] overflow-hidden rounded-[1.6rem] bg-[linear-gradient(135deg,#fffaf2_0%,#edf4fb_48%,#dce8f3_100%)] p-5 sm:p-7">
-          <div className="absolute inset-x-0 top-0 h-24 bg-white/55" />
-          <div className="absolute right-8 top-8 h-24 w-24 rounded-full bg-[#8b4a24]/10" />
-
-          <div className="absolute left-7 top-8 w-[58%] rotate-[-3deg] rounded-2xl border border-line bg-white p-5 shadow-soft">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue">
-              Financial Roadmap
-            </p>
-            <div className="mt-5 space-y-3">
-              {["Cash flow", "Benefits", "Savings", "Next action"].map(
-                (item, index) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <span className="flex h-5 w-5 items-center justify-center rounded border border-green/50 bg-green/10 text-[10px] font-bold text-green">
-                      {index < 2 ? "✓" : ""}
-                    </span>
-                    <span className="text-sm font-medium text-slate">
-                      {item}
-                    </span>
-                  </div>
-                ),
-              )}
-            </div>
-          </div>
-
-          <div className="absolute bottom-8 left-8 w-[48%] rotate-[2deg] rounded-2xl border border-line bg-white p-5 shadow-soft">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue">
-              Notebook
-            </p>
-            <p className="mt-4 text-2xl font-semibold leading-tight text-navy">
-              What matters next?
-            </p>
-            <div className="mt-5 space-y-2">
-              <div className="h-2 w-11/12 rounded-full bg-cloud" />
-              <div className="h-2 w-9/12 rounded-full bg-cloud" />
-              <div className="h-2 w-10/12 rounded-full bg-cloud" />
-            </div>
-          </div>
-
-          <div className="absolute bottom-8 right-7 w-[45%] rounded-[1.4rem] border border-line bg-navy p-4 shadow-soft">
-            <div className="rounded-xl bg-white p-3">
-              <div className="mb-3 grid grid-cols-4 gap-1">
-                {[60, 42, 72, 54].map((width) => (
-                  <div key={width} className="h-2 rounded-full bg-cloud">
-                    <div
-                      className="h-2 rounded-full bg-gradient-to-r from-sky to-green"
-                      style={{ width: `${width}%` }}
-                    />
-                  </div>
-                ))}
-              </div>
-              <div className="grid grid-cols-3 gap-1">
-                {Array.from({ length: 12 }).map((_, index) => (
-                  <div
-                    key={index}
-                    className="h-4 rounded bg-[rgba(220,232,243,0.72)]"
-                  />
-                ))}
-              </div>
-            </div>
-            <p className="mt-3 text-xs font-semibold text-cloud">
-              A clear view of the numbers.
-            </p>
-          </div>
-
-          <div className="absolute right-9 top-12 flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-soft">
-            <div className="h-16 w-16 rounded-full border-[12px] border-[#8b4a24]/20 bg-[#6f3d20]">
-              <div className="mx-auto mt-3 h-6 w-7 rounded-full bg-[#f3dcc5]/80" />
-            </div>
-          </div>
-
-          <div className="absolute left-[46%] top-[47%] h-3 w-40 rotate-[-24deg] rounded-full bg-navy shadow-sm">
-            <span className="absolute right-0 top-[-4px] h-5 w-5 rounded-full bg-green" />
-          </div>
-
-          <div className="absolute right-10 top-[38%] w-36 rotate-[6deg] rounded-2xl border border-line bg-white p-4 shadow-soft">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue">
-              Checklist
-            </p>
-            <div className="mt-4 space-y-2">
-              {["401(k)", "HSA", "529"].map((item) => (
-                <div key={item} className="flex items-center gap-2">
-                  <span className="h-4 w-4 rounded border border-green bg-green/15" />
-                  <span className="text-xs font-semibold text-slate">
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full border border-line bg-white/90 px-4 py-2 text-xs font-semibold text-slate shadow-sm">
-            Notebook • roadmap • coffee • one clear next step
-          </div>
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 p-3 shadow-soft backdrop-blur sm:p-4">
+        <div className="relative h-[22rem] overflow-hidden rounded-[1.6rem] bg-cloud sm:h-[30rem] lg:h-[34rem]">
+          <Image
+            src="/images/clutch-financial-hero-workspace.png"
+            alt="Financial planning workspace with a flat white, financial roadmap, next steps checklist, and laptop spreadsheet."
+            fill
+            priority
+            sizes="(min-width: 1024px) 45vw, (min-width: 640px) 90vw, 100vw"
+            className="object-cover object-[46%_52%] sm:object-[48%_52%] lg:object-[50%_50%]"
+          />
         </div>
       </div>
     </div>
@@ -217,7 +132,7 @@ export default function Home() {
           </div>
         </div>
 
-        <PlanningDeskVisual />
+        <HeroWorkspaceImage />
       </section>
 
       <section className="border-y border-line bg-white px-5 py-16 sm:px-8 sm:py-20">
