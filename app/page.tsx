@@ -77,17 +77,16 @@ const whoWeHelp = [
 function HeroWorkspaceImage() {
   return (
     <div className="relative animate-fade-up [animation-delay:120ms]">
-      <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 p-3 shadow-soft backdrop-blur sm:p-4">
-        <div className="relative h-[22rem] overflow-hidden rounded-[1.6rem] bg-cloud sm:h-[30rem] lg:h-[34rem]">
-          <Image
-            src="/images/clutch-financial-hero-workspace.png"
-            alt="Financial planning workspace with a flat white, financial roadmap, next steps checklist, and laptop spreadsheet."
-            fill
-            priority
-            sizes="(min-width: 1024px) 45vw, (min-width: 640px) 90vw, 100vw"
-            className="object-cover object-[46%_52%] sm:object-[48%_52%] lg:object-[50%_50%]"
-          />
-        </div>
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/85 p-2 shadow-soft backdrop-blur">
+        <Image
+          src="/images/clutch-financial-hero-workspace.png"
+          alt="Financial planning workspace with a flat white, financial roadmap, next steps checklist, and laptop spreadsheet."
+          width={1536}
+          height={1024}
+          priority
+          sizes="(min-width: 1024px) 52vw, (min-width: 640px) 90vw, 100vw"
+          className="h-auto w-full rounded-[1.6rem] object-contain"
+        />
       </div>
     </div>
   );
@@ -96,7 +95,7 @@ function HeroWorkspaceImage() {
 export default function Home() {
   return (
     <PageShell>
-      <section className="relative mx-auto grid min-h-[calc(100vh-65px)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
+      <section className="relative mx-auto grid min-h-[calc(100vh-65px)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[0.98fr_1.02fr] lg:py-20">
         <div className="animate-fade-up">
           <h1 className="font-display max-w-4xl text-5xl font-semibold leading-[1.02] text-navy sm:text-6xl lg:text-7xl">
             Helping professionals and growing families build lasting financial
