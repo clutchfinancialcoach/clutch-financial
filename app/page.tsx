@@ -76,7 +76,7 @@ const whoWeHelp = [
 
 function HeroWorkspaceImage() {
   return (
-    <div className="relative animate-fade-up [animation-delay:120ms]">
+    <div className="relative animate-fade-up lg:translate-x-7 lg:scale-[1.04] [animation-delay:120ms]">
       <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/85 p-2 shadow-soft backdrop-blur">
         <Image
           src="/images/clutch-financial-hero-workspace.png"
@@ -95,9 +95,9 @@ function HeroWorkspaceImage() {
 export default function Home() {
   return (
     <PageShell>
-      <section className="relative mx-auto grid min-h-[calc(100vh-65px)] max-w-[90rem] items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[0.96fr_1.04fr] lg:py-20">
+      <section className="relative mx-auto grid min-h-[calc(100vh-65px)] max-w-[90rem] items-center gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[0.98fr_1.02fr] lg:py-20">
         <div className="animate-fade-up">
-          <h1 className="font-display max-w-[42rem] text-5xl font-semibold leading-[1.02] text-navy sm:text-6xl lg:text-7xl">
+          <h1 className="font-display max-w-[42rem] text-5xl font-semibold leading-[1.05] text-navy sm:text-6xl lg:text-7xl">
             Helping professionals and growing families make confident financial
             decisions.
           </h1>
