@@ -84,7 +84,7 @@ function HeroWorkspaceImage() {
           width={1536}
           height={1024}
           priority
-          sizes="(min-width: 1024px) 52vw, (min-width: 640px) 90vw, 100vw"
+          sizes="(min-width: 1024px) 50vw, (min-width: 640px) 90vw, 100vw"
           className="h-auto w-full rounded-[1.6rem] object-contain"
         />
       </div>
@@ -95,33 +95,33 @@ function HeroWorkspaceImage() {
 export default function Home() {
   return (
     <PageShell>
-      <section className="relative mx-auto grid min-h-[calc(100vh-65px)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[0.98fr_1.02fr] lg:py-20">
+      <section className="relative mx-auto grid min-h-[calc(100vh-65px)] max-w-[90rem] items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[0.96fr_1.04fr] lg:py-20">
         <div className="animate-fade-up">
-          <h1 className="font-display max-w-4xl text-5xl font-semibold leading-[1.02] text-navy sm:text-6xl lg:text-7xl">
-            Helping professionals and growing families build lasting financial
-            confidence.
+          <h1 className="font-display max-w-[42rem] text-5xl font-semibold leading-[1.02] text-navy sm:text-6xl lg:text-7xl">
+            Helping professionals and growing families make confident financial
+            decisions.
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate">
-            Build the habits, systems, and confidence to make better financial
-            decisions for decades to come.
+            Build the habits and systems that help you make confident financial
+            decisions for years to come.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href={contactMailto}>
+            <a
+              href={contactMailto}
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-blue focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2"
+            >
               Schedule an Introductory Consultation
-            </ButtonLink>
+            </a>
             <ButtonLink href="/services" variant="secondary">
               Explore services
             </ButtonLink>
           </div>
-          <p className="mt-6 max-w-xl text-sm leading-7 text-slate">
-            Complimentary • 30 minutes • No obligation
-          </p>
-          <div className="mt-7 grid max-w-2xl gap-3 text-sm font-semibold text-slate sm:grid-cols-2">
+          <div className="mt-5 grid max-w-2xl gap-x-5 gap-y-2 text-xs font-semibold text-slate sm:grid-cols-2">
             {[
-              "Practical guidance",
-              "Personalized planning",
-              "Accountability that keeps you moving",
-              "No product sales. No commissions.",
+              "Complimentary consultation",
+              "No product sales",
+              "No pressure",
+              "Personalized guidance",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <span className="text-green">✓</span>
