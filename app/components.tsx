@@ -92,7 +92,7 @@ export function ButtonLink({
 }) {
   const classes = {
     primary:
-      "bg-blue text-white shadow-glow hover:-translate-y-0.5 hover:bg-navy",
+      "bg-navy text-white shadow-soft hover:-translate-y-0.5 hover:bg-blue",
     secondary:
       "border border-line bg-white text-navy hover:-translate-y-0.5 hover:border-sky hover:text-blue",
     light:
@@ -282,12 +282,11 @@ export function CTASection() {
             Introductory consultation
           </p>
           <h2 className="font-display max-w-3xl text-4xl font-semibold leading-tight sm:text-6xl">
-            You do not have to sort through every money decision by yourself.
+            Bring one money decision. Leave with a clearer next step.
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cloud">
-            A complimentary 30-minute conversation gives us room to talk through
-            what is on your mind and decide whether coaching is the right kind
-            of help.
+            A complimentary 30-minute conversation with Humair to see what you
+            are working through and whether coaching is the right fit.
           </p>
         </div>
         <div className="rounded-[1.5rem] border border-white/10 bg-white p-6 text-navy">
@@ -298,8 +297,8 @@ export function CTASection() {
             Schedule an Introductory Consultation
           </p>
           <p className="mt-4 text-sm leading-7 text-slate">
-            Bring the questions, decisions, or loose pieces you want help
-            organizing. We will start there.
+            Email opens automatically. You can also write directly to{" "}
+            {contactEmail}.
           </p>
           <div className="mt-6">
             <ButtonLink href={contactMailto}>

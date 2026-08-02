@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ButtonLink,
   contactMailto,
@@ -7,10 +8,10 @@ import {
 } from "../components";
 
 const principles = [
-  "Simple habits matter more when they are built early and repeated well.",
-  "A good plan should fit the life someone is actually living.",
-  "People do better when they feel understood, not judged.",
-  "The next step should be clear enough to take.",
+  "Make the next step clear.",
+  "Build systems people can actually use.",
+  "Keep the conversation calm and judgment-free.",
+  "Focus on follow-through, not theory.",
 ];
 
 const focusAreas = [
@@ -27,7 +28,7 @@ export default function AboutPage() {
     <PageShell>
       <PageHero
         eyebrow="About Humair"
-        title="Built from real conversations, practical systems, and a genuine desire to help."
+        title="Practical financial coaching from someone who enjoys helping people get organized."
         body="Humair believes lasting financial success comes from simple habits, thoughtful decisions, and consistent follow-through. Clutch Financial exists to help people build those habits earlier and move forward with confidence."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
@@ -41,39 +42,31 @@ export default function AboutPage() {
       </PageHero>
 
       <section className="border-y border-line bg-white px-5 py-20 sm:px-8 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <div className="rounded-[2rem] border border-line bg-ice p-4 shadow-soft">
-            <div className="flex min-h-96 flex-col justify-between rounded-[1.5rem] bg-[linear-gradient(135deg,#001028_0%,#071832_55%,#0b63ce_135%)] p-7 text-white">
-              <p className="text-sm uppercase tracking-[0.18em] text-cloud">
-                Clutch Financial
-              </p>
-              <div>
-                <p className="font-display text-4xl font-semibold leading-tight">
-                  Good money habits should feel usable, not mysterious.
-                </p>
-                <p className="mt-5 max-w-md text-sm leading-7 text-cloud">
-                  The work is learning what matters, building a system, and
-                  staying with it.
-                </p>
-              </div>
-            </div>
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.65fr_1.35fr] lg:items-start">
+          <div className="overflow-hidden rounded-[2rem] border border-line bg-ice shadow-soft lg:max-w-[29rem]">
+            <Image
+              src="/images/humair-khan-about-portrait.jpg"
+              alt="Humair Khan, founder of Clutch Financial"
+              width={1570}
+              height={1903}
+              priority
+              className="aspect-[4/4.35] w-full object-cover object-[50%_44%]"
+            />
           </div>
           <div className="space-y-6 text-lg leading-8 text-slate">
             <p>
-              Through years of personal learning, Humair built his own financial
-              systems: budgets, spreadsheets, checklists, and planning rhythms
-              he could actually use.
+              Humair started Clutch Financial after years of building his own
+              financial systems and helping family and friends talk through the
+              choices in front of them.
             </p>
             <p>
-              Along the way, he started helping family and friends think through
-              important decisions. Sometimes that meant sorting through cash
-              flow. Sometimes it meant talking through 529s, Roth IRAs, HSAs,
-              benefits, budgeting, or a major purchase.
+              Sometimes that meant cash flow. Sometimes it meant benefits, Roth
+              IRAs, HSAs, 529s, equity questions, or a major purchase. The
+              pattern was usually the same: people did not need a lecture. They
+              needed structure, a little education, and a clear next action.
             </p>
             <p>
-              Those conversations turned into a passion for helping people get
-              ahead earlier, build real confidence, and avoid learning every
-              lesson the hard way.
+              Those conversations became the reason Clutch Financial exists.
             </p>
             <p>
               As Humair puts it, &quot;I can&apos;t change the financial
@@ -96,9 +89,8 @@ export default function AboutPage() {
               Financial success is usually less dramatic than people think.
             </h2>
             <p className="mt-5 text-lg leading-8 text-slate">
-              It is rarely about finding secret strategies. It is usually about
-              building good habits, making thoughtful decisions, and following
-              through over time.
+              There are no secret strategies here. The work is learning what
+              matters, making a decision, and building a rhythm you can keep.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">

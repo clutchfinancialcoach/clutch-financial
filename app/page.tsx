@@ -8,70 +8,51 @@ import {
 } from "./components";
 
 const painPoints = [
-  "You are earning money, but the system around it still feels patched together.",
-  "Life is getting fuller, and the money decisions are starting to matter more.",
-  "You know the basics. You want help making them part of your actual life.",
+  "Your money is moving, but the system around it feels patched together.",
+  "The decisions are getting bigger: home, kids, benefits, equity, savings.",
+  "You want someone practical to help you choose the next right step.",
 ];
 
 const steps = [
   {
-    title: "Understand where you are",
-    body: "We look at what is true right now: your income, spending, accounts, benefits, goals, and the decisions on your mind.",
+    title: "Get the picture",
+    body: "Income, spending, accounts, goals, and the decision that has been sitting in the background.",
   },
   {
-    title: "Choose the next actions",
-    body: "We decide what needs attention now, what can wait, and what a useful next step actually looks like.",
+    title: "Build the system",
+    body: "A practical rhythm for cash flow, savings, benefits, and the actions that matter now.",
   },
   {
     title: "Follow through",
-    body: "You leave with a small set of actions you understand and a rhythm you can come back to.",
+    body: "Clear next steps, accountability, and a way to keep coming back to the plan.",
   },
 ];
 
 const whoWeHelp = [
   {
     title: "Early Career Professionals",
-    theme: "Start strong with the financial basics.",
-    items: [
-      "First paycheck",
-      "Budgeting",
-      "401(k)",
-      "Roth IRA",
-      "HSA",
-      "Investing fundamentals",
-      "Compounding",
-      "Building early momentum",
-    ],
+    theme: "First paycheck, 401(k), Roth IRA, HSA, saving habits.",
+    items: ["First paycheck", "401(k)", "Roth IRA", "HSA"],
   },
   {
     title: "Professionals",
-    theme: "Bring more structure to the financial life you are already building.",
-    items: [
-      "Cash flow",
-      "Benefits",
-      "Equity compensation",
-      "Major purchases",
-      "Savings habits",
-      "Investment education",
-      "Decision support",
-      "Follow-through",
-    ],
+    theme: "Cash flow, benefits, equity questions, major purchases.",
+    items: ["Cash flow", "Benefits", "Equity", "Big decisions"],
   },
   {
     title: "Growing Families",
-    theme: "Make thoughtful decisions as life becomes more complex.",
-    items: [
-      "Marriage",
-      "Kids",
-      "Cash flow",
-      "Home decisions",
-      "529 college savings",
-      "Equity compensation",
-      "Major purchases",
-      "Retirement savings",
-      "Family financial alignment",
-    ],
+    theme: "Marriage, kids, home choices, 529s, family priorities.",
+    items: ["Family cash flow", "529s", "Home choices", "Priorities"],
   },
+];
+
+const systemMap = [
+  "Cash flow",
+  "Savings",
+  "Benefits",
+  "Debt",
+  "Investing basics",
+  "Next decision",
 ];
 
 function HeroWorkspaceImage() {
@@ -87,6 +68,74 @@ function HeroWorkspaceImage() {
           sizes="(min-width: 1024px) 50vw, (min-width: 640px) 90vw, 100vw"
           className="h-auto w-full rounded-[1.6rem] object-contain"
         />
+      </div>
+    </div>
+  );
+}
+
+function FounderSnapshot() {
+  return (
+    <section className="border-y border-line bg-white px-5 py-14 sm:px-8 sm:py-16">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.55fr_1fr] lg:items-center">
+        <div className="overflow-hidden rounded-[2rem] border border-line bg-ice shadow-soft">
+          <Image
+            src="/images/humair-khan-headshot.jpg"
+            alt="Humair Khan, founder of Clutch Financial"
+            width={1707}
+            height={1842}
+            className="aspect-[4/4.2] w-full object-cover object-[50%_38%]"
+          />
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue">
+            Meet Humair
+          </p>
+          <h2 className="mt-4 max-w-3xl font-display text-3xl font-semibold leading-tight text-navy sm:text-5xl">
+            A real person helping you turn money questions into clear next
+            steps.
+          </h2>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate">
+            Clutch Financial started the way a lot of useful things start:
+            helping family and friends sort through real decisions. The work is
+            calm, practical, and built around habits you can actually keep.
+          </p>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <ButtonLink href="/about" variant="secondary">
+              About Humair
+            </ButtonLink>
+            <ButtonLink href={contactMailto}>
+              Start the conversation
+            </ButtonLink>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SystemVisual() {
+  return (
+    <div className="rounded-[2rem] border border-line bg-white p-5 shadow-soft sm:p-6">
+      <div className="rounded-[1.5rem] bg-ice p-5">
+        <div className="grid gap-3 sm:grid-cols-2">
+          {systemMap.map((item, index) => (
+            <div
+              key={item}
+              className="flex items-center gap-3 rounded-2xl border border-line bg-white px-4 py-3"
+            >
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy text-xs font-semibold text-white">
+                {index + 1}
+              </span>
+              <span className="text-sm font-semibold text-navy">{item}</span>
+            </div>
+          ))}
+        </div>
+        <div className="mt-5 rounded-2xl bg-navy px-5 py-4 text-white">
+          <p className="text-sm font-semibold text-green">Output</p>
+          <p className="mt-1 text-xl font-semibold">
+            A plan you understand, with fewer loose ends.
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -134,45 +183,29 @@ export default function Home() {
         <HeroWorkspaceImage />
       </section>
 
-      <section className="border-y border-line bg-white px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-7xl rounded-[2rem] bg-navy p-8 text-white shadow-glow sm:p-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-green">
-            Brand philosophy
-          </p>
-          <h2 className="mt-4 max-w-4xl font-display text-3xl font-semibold leading-tight sm:text-5xl">
-            Bringing structure to financial uncertainty.
-          </h2>
-          <div className="mt-6 max-w-3xl space-y-4 text-lg leading-8 text-cloud">
-            <p>Money is rarely just about numbers.</p>
-            <p>
-              It is about decisions, priorities, relationships, and the future
-              you want to build.
-            </p>
-            <p>
-              Clutch Financial helps bring structure to uncertainty so you can
-              move forward with confidence.
-            </p>
-          </div>
+      <FounderSnapshot />
+
+      <section className="px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <SectionIntro
+            eyebrow="The coaching system"
+            title="Bring the moving pieces into one clear view."
+            body="Most people do not need more random tips. They need a simple way to see what matters, choose a priority, and act."
+          />
+          <SystemVisual />
         </div>
       </section>
 
-      <section className="px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-          <SectionIntro
-            eyebrow="Why clients reach out"
-            title="Most people are not short on financial opinions."
-            body="They need a way to sort through the noise, make a decision, and keep moving."
-          />
-          <div className="grid gap-4 md:grid-cols-3">
-            {painPoints.map((point) => (
-              <div
-                key={point}
-                className="rounded-3xl border border-line bg-ice p-6 text-lg leading-8 text-slate shadow-sm"
-              >
-                {point}
-              </div>
-            ))}
-          </div>
+      <section className="border-y border-line bg-white px-5 py-14 sm:px-8 sm:py-16">
+        <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-3">
+          {painPoints.map((point) => (
+            <div
+              key={point}
+              className="rounded-3xl border border-line bg-ice p-6 text-base leading-7 text-slate shadow-sm"
+            >
+              {point}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -180,19 +213,19 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionIntro
             eyebrow="Who we help"
-            title="For professionals and families building their footing."
-            body="Clutch Financial focuses on the years when habits, family choices, and long-term planning start to become part of everyday life."
+            title="For people building real life while trying to make smart decisions."
+            body="Early momentum matters. So does having a system that still works when life gets busier."
           />
-          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {whoWeHelp.map((group) => (
               <article
                 key={group.title}
-                className="rounded-3xl border border-line bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-soft"
+                className="rounded-3xl border border-line bg-white p-6 shadow-sm"
               >
                 <h2 className="font-display text-3xl font-semibold">
                   {group.title}
                 </h2>
-                <p className="mt-3 text-base font-semibold text-blue">
+                <p className="mt-3 text-base leading-7 text-slate">
                   {group.theme}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ButtonLink,
   contactEmail,
@@ -7,10 +8,10 @@ import {
 } from "../components";
 
 const callTopics = [
-  "What feels unclear right now",
-  "The habits or decisions you want help with",
-  "Whether coaching is the right kind of support",
-  "One practical next step",
+  "What feels unclear",
+  "The decision in front of you",
+  "What support would actually help",
+  "A practical next step",
 ];
 
 export default function ContactPage() {
@@ -19,7 +20,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Schedule an Introductory Consultation"
-        body="A complimentary 30-minute conversation to talk through what is on your mind and see whether Clutch Financial is the right fit."
+        body="A complimentary 30-minute conversation with Humair to talk through what is on your mind and see whether coaching is the right fit."
       />
 
       <section className="border-y border-line bg-white px-5 py-20 sm:px-8 sm:py-24">
@@ -36,6 +37,21 @@ export default function ContactPage() {
               help sorting through. I will reply personally so we can find a
               good time to talk.
             </p>
+            <div className="mt-6 flex items-center gap-4 rounded-2xl border border-line bg-white p-4">
+              <Image
+                src="/images/humair-khan-headshot.jpg"
+                alt="Humair Khan, founder of Clutch Financial"
+                width={120}
+                height={120}
+                className="h-16 w-16 rounded-full object-cover object-[50%_34%]"
+              />
+              <div>
+                <p className="font-semibold text-navy">Humair Khan</p>
+                <p className="text-sm leading-6 text-slate">
+                  Founder, Clutch Financial
+                </p>
+              </div>
+            </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href={contactMailto}>
                 Schedule an Introductory Consultation

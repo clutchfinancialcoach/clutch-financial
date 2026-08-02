@@ -9,52 +9,19 @@ import {
 
 const services = [
   {
-    title: "Financial Foundations",
-    description:
-      "Get your footing when real income starts coming in and the number of choices begins to grow.",
-    includes: ["First paycheck", "401(k)", "Roth IRA", "HSA", "Investing fundamentals"],
+    title: "Get organized",
+    description: "Turn scattered accounts, spending, and goals into one clear picture.",
+    includes: ["Cash flow", "Accounts", "Benefits", "Priorities"],
   },
   {
-    title: "Budgeting & Cash Flow Systems",
-    description:
-      "Build a system that reflects your actual life, not a perfect spreadsheet you stop opening after two weeks.",
-    includes: ["Spending rhythm", "Monthly review", "Savings targets", "Decision rules"],
+    title: "Make better decisions",
+    description: "Talk through the choices that feel bigger than a quick Google search.",
+    includes: ["401(k)", "Roth IRA", "HSA", "529", "Equity", "Major purchases"],
   },
   {
-    title: "Roth IRA / 401(k) / HSA Setup Guidance",
-    description:
-      "Understand what these accounts are for, what questions to ask, and what action makes sense next.",
-    includes: ["Account education", "Contribution habits", "Benefits review", "Action checklist"],
-  },
-  {
-    title: "College Savings & 529 Planning",
-    description:
-      "Think through college savings as one part of your family picture, without letting it take over every other priority.",
-    includes: ["529 education", "Family priorities", "Savings rhythm", "Tradeoffs"],
-  },
-  {
-    title: "Couples & Family Money Alignment",
-    description:
-      "Create a shared language for spending, saving, kids, major purchases, and the habits you want at home.",
-    includes: ["Money conversations", "Shared goals", "Family cash flow", "Decision agreements"],
-  },
-  {
-    title: "Equity Compensation Decision Support",
-    description:
-      "Organize your questions around RSUs, stock options, concentration, tax topics for a tax professional, and how equity fits into the rest of your life.",
-    includes: ["RSU questions", "Option considerations", "Concentration awareness", "Next questions"],
-  },
-  {
-    title: "Major Purchase Decision Support",
-    description:
-      "Slow down before a home, car, family transition, or career move so the numbers and tradeoffs are easier to see.",
-    includes: ["Scenario planning", "Cash impact", "Tradeoffs", "Decision timing"],
-  },
-  {
-    title: "Accountability & Follow-Through",
-    description:
-      "Keep going after the first plan is built with check-ins, adjustments, and specific next actions.",
-    includes: ["Progress reviews", "Plan adjustments", "Action steps", "Follow-through"],
+    title: "Follow through",
+    description: "Leave with simple next steps and a rhythm that keeps the plan alive.",
+    includes: ["Action list", "Review rhythm", "Accountability", "Adjustments"],
   },
 ];
 
@@ -71,7 +38,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Financial coaching for the decisions real life keeps putting in front of you."
-        body="The work is organized around first real income, marriage, kids, equity compensation, major purchases, and the habits that make money easier to manage. Package pricing is not published yet."
+        body="Get organized, make thoughtful decisions, and build habits that are easier to keep. Package pricing is not published yet."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={contactMailto}>
@@ -87,16 +54,19 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl">
           <SectionIntro
             eyebrow="Core services"
-            title="Structure for the actions that move your financial life forward."
-            body="Each engagement is shaped around your situation. These are the areas clients often want help understanding, prioritizing, and finishing."
+            title="Three ways coaching helps."
+            body="The details are personal, but the work usually falls into a simple pattern."
           />
-          <div className="mt-12 grid gap-5 lg:grid-cols-2">
-            {services.map((service) => (
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {services.map((service, index) => (
               <article
                 key={service.title}
-                className="rounded-3xl border border-line bg-ice p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-soft"
+                className="rounded-3xl border border-line bg-ice p-6 shadow-sm"
               >
-                <h2 className="font-display text-3xl font-semibold text-navy">
+                <p className="flex h-11 w-11 items-center justify-center rounded-full bg-navy text-sm font-semibold text-white">
+                  {index + 1}
+                </p>
+                <h2 className="mt-6 font-display text-3xl font-semibold text-navy">
                   {service.title}
                 </h2>
                 <p className="mt-4 text-base leading-8 text-slate">
@@ -122,8 +92,8 @@ export default function ServicesPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionIntro
             eyebrow="Good fit"
-            title="This works best when you want to be involved in the plan."
-            body="You bring the goals, numbers, context, and decisions. Clutch Financial brings structure, education, and accountability so the next steps do not just sit there."
+            title="This works best when you want to be involved."
+            body="You bring the goals, numbers, and context. Clutch Financial brings structure, education, and accountability."
           />
           <div className="grid gap-4 sm:grid-cols-2">
             {fit.map((item) => (
