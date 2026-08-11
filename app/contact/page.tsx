@@ -50,6 +50,9 @@ export default function ContactPage() {
                 <p className="text-sm leading-6 text-slate">
                   Founder, Clutch Financial
                 </p>
+                <p className="text-xs font-semibold leading-6 text-blue">
+                  Ramsey Financial Coach Certification · MBA
+                </p>
               </div>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

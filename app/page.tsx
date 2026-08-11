@@ -99,6 +99,9 @@ function FounderSnapshot() {
             helping family and friends sort through real decisions. The work is
             calm, practical, and built around habits you can actually keep.
           </p>
+          <p className="mt-4 max-w-2xl text-sm font-semibold leading-7 text-slate">
+            Ramsey Financial Coach Certification · Finance background · MBA
+          </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="/about" variant="secondary">
               About Humair

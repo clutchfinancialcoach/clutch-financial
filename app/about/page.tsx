@@ -23,6 +23,12 @@ const focusAreas = [
   "Long-term planning actions",
 ];
 
+const credentials = [
+  "Ramsey Financial Coach Certification",
+  "Finance undergraduate background",
+  "MBA",
+];
+
 export default function AboutPage() {
   return (
     <PageShell>
@@ -52,12 +58,27 @@ export default function AboutPage() {
               priority
               className="aspect-[4/4.35] w-full object-cover object-[50%_44%]"
             />
+            <div className="border-t border-line bg-white p-5">
+              <p className="text-sm font-semibold text-navy">Humair Khan</p>
+              <div className="mt-3 space-y-2">
+                {credentials.map((credential) => (
+                  <p
+                    key={credential}
+                    className="flex items-center gap-2 text-sm leading-6 text-slate"
+                  >
+                    <span className="text-green">✓</span>
+                    <span>{credential}</span>
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
           <div className="space-y-6 text-lg leading-8 text-slate">
             <p>
               Humair started Clutch Financial after years of building his own
-              financial systems and helping family and friends talk through the
-              choices in front of them.
+              financial systems, studying finance, earning an MBA, completing
+              the Ramsey Financial Coach Certification, and helping family and
+              friends talk through the choices in front of them.
             </p>
             <p>
               Sometimes that meant cash flow. Sometimes it meant benefits, Roth
