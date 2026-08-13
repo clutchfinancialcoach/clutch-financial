@@ -13,21 +13,6 @@ const painPoints = [
   "You want someone practical to help you choose the next right step.",
 ];
 
-const steps = [
-  {
-    title: "Get the picture",
-    body: "Income, spending, accounts, goals, and the decision that has been sitting in the background.",
-  },
-  {
-    title: "Build the system",
-    body: "A practical rhythm for cash flow, savings, benefits, and the actions that matter now.",
-  },
-  {
-    title: "Follow through",
-    body: "Clear next steps, accountability, and a way to keep coming back to the plan.",
-  },
-];
-
 const whoWeHelp = [
   {
     title: "Early Career Professionals",
@@ -281,8 +266,8 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <SectionIntro
             eyebrow="The coaching system"
-            title="Bring the moving pieces into one clear view."
-            body="Most people do not need more random tips. They need a simple way to see what matters, choose a priority, and act."
+            title="Get the picture. Build the system. Follow through."
+            body="Most people do not need more random tips. They need a simple way to see what matters and choose the next step."
           />
           <SystemVisual />
         </div>
@@ -330,33 +315,6 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-navy px-5 py-16 text-white sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-          <SectionIntro
-            eyebrow="Process"
-            title="You may already know some of what you want to do."
-            body="The work is turning that into clear steps you can actually follow."
-            inverted
-          />
-          <div className="grid gap-4 md:grid-cols-3">
-            {steps.map((step, index) => (
-              <article
-                key={step.title}
-                className="rounded-3xl border border-white/10 bg-white/[0.06] p-6"
-              >
-                <p className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-sm font-semibold text-green">
-                  0{index + 1}
-                </p>
-                <h2 className="mt-6 font-display text-2xl font-semibold">
-                  {step.title}
-                </h2>
-                <p className="mt-4 text-sm leading-7 text-cloud">{step.body}</p>
               </article>
             ))}
           </div>
