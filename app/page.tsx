@@ -7,27 +7,21 @@ import {
   SectionIntro,
 } from "./components";
 
-const painPoints = [
-  "Your money is moving, but the system around it feels patched together.",
-  "The decisions are getting bigger: home, kids, benefits, equity, savings.",
-  "You want someone practical to help you choose the next right step.",
-];
-
-const whoWeHelp = [
+const scenarios = [
   {
-    title: "Early Career Professionals",
-    theme: "First paycheck, 401(k), Roth IRA, HSA, saving habits.",
-    items: ["First paycheck", "401(k)", "Roth IRA", "HSA"],
+    title: "You are early in your career",
+    body: "The first real paychecks are coming in. You want to start well instead of winging it.",
+    items: ["401(k)", "Roth IRA", "HSA", "Savings rhythm"],
   },
   {
-    title: "Professionals",
-    theme: "Cash flow, benefits, equity questions, major purchases.",
-    items: ["Cash flow", "Benefits", "Equity", "Big decisions"],
+    title: "Life is getting more complex",
+    body: "Marriage, kids, a home, equity, or benefits are creating decisions you do not want to handle casually.",
+    items: ["Cash flow", "529s", "Benefits", "Major purchases"],
   },
   {
-    title: "Growing Families",
-    theme: "Marriage, kids, home choices, 529s, family priorities.",
-    items: ["Family cash flow", "529s", "Home choices", "Priorities"],
+    title: "You mostly need follow-through",
+    body: "You know the basics. What you need is a coach to help you decide, set it up, and come back to it.",
+    items: ["Accountability", "Next action", "Decision rules", "Review rhythm"],
   },
 ];
 
@@ -62,7 +56,7 @@ const systemMap = [
 function HeroWorkspaceImage() {
   return (
     <div className="relative animate-fade-up lg:translate-x-7 lg:scale-[1.04] [animation-delay:120ms]">
-      <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/85 p-2 shadow-soft backdrop-blur">
+      <div className="relative overflow-hidden rounded-[2rem] border border-cognac/35 bg-white/85 p-2 shadow-soft backdrop-blur">
         <Image
           src="/images/clutch-financial-hero-workspace.png"
           alt="Financial planning workspace with a flat white, financial roadmap, next steps checklist, and laptop spreadsheet."
@@ -79,9 +73,9 @@ function HeroWorkspaceImage() {
 
 function FounderSnapshot() {
   return (
-    <section className="border-y border-line bg-white px-5 py-14 sm:px-8 sm:py-16">
-      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.55fr_1fr] lg:items-center">
-        <div className="overflow-hidden rounded-[2rem] border border-line bg-ice shadow-soft">
+    <section className="border-y border-cognac/20 bg-white px-5 py-14 sm:px-8 sm:py-20">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.46fr_1fr] lg:items-center">
+        <div className="overflow-hidden rounded-[1.6rem] border border-line bg-ice shadow-soft lg:max-w-sm">
           <Image
             src="/images/humair-khan-headshot.jpg"
             alt="Humair Khan, founder of Clutch Financial"
@@ -92,16 +86,21 @@ function FounderSnapshot() {
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue">
-            Meet Humair
+            A note from Humair
           </p>
-          <h2 className="mt-4 max-w-3xl font-display text-3xl font-semibold leading-tight text-navy sm:text-5xl">
-            A real person helping you turn money questions into clear next
-            steps.
+          <h2 className="mt-4 max-w-4xl font-display text-3xl font-semibold leading-tight text-navy sm:text-5xl">
+            Knowing what to do is not the same as doing it.
           </h2>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate">
-            Clutch Financial started the way a lot of useful things start:
-            helping family and friends sort through real decisions. The work is
-            calm, practical, and built around habits you can actually keep.
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate">
+            There is plenty of content about money. Books, podcasts, calculators,
+            social media threads, and endless articles can teach you the basics.
+            But a little like fitness, knowing the exercise does not mean you
+            will actually do the reps.
+          </p>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-slate">
+            Clutch Financial exists for the gap between knowing and acting.
+            Some people need education. Some need a simple plan. Some just need
+            a push to act.
           </p>
           <p className="mt-4 max-w-2xl text-sm font-semibold leading-7 text-slate">
             Ramsey Financial Coach Certification · Finance background · MBA
@@ -113,6 +112,106 @@ function FounderSnapshot() {
             <ButtonLink href={contactMailto}>
               Start the conversation
             </ButtonLink>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ActionGapSection() {
+  return (
+    <section className="bg-[linear-gradient(135deg,#001028_0%,#071832_58%,#1d130d_130%)] px-5 py-16 text-white sm:px-8 sm:py-20">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+        <div>
+          <h2 className="max-w-4xl font-display text-4xl font-semibold leading-tight sm:text-6xl">
+            The Cost of Waiting
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-cloud">
+            Here is a simple 529 example. Invest $10,000 when a child is born,
+            add $100 each month, and assume a hypothetical 8% annual return. By
+            age 18, that could grow to about $90,000.
+          </p>
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-cloud">
+            Wait until age 2 to start, with the same deposit and monthly
+            contributions, and the account could be closer to $74,500. That
+            two-year delay costs roughly $15,500.
+          </p>
+          <p className="mt-5 max-w-2xl text-xs leading-6 text-cloud/75">
+            Hypothetical example for education only. Actual returns vary and are
+            not guaranteed.
+          </p>
+        </div>
+
+        <div className="rounded-[2rem] border border-cognac/30 bg-white/[0.06] p-5 shadow-glow backdrop-blur sm:p-6">
+          <div className="mb-6 flex items-center justify-between gap-4">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cognac">
+              Same plan. Later start.
+            </p>
+            <p className="rounded-full border border-cognac/30 px-3 py-1.5 text-xs font-semibold text-cloud">
+              $10k + $100/mo · 8% · age 18
+            </p>
+          </div>
+
+          <div className="rounded-[1.4rem] border border-white/10 bg-white/[0.07] p-5">
+            <div className="grid gap-6">
+              <div>
+                <div className="flex items-end justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-semibold text-green">
+                      Start at birth
+                    </p>
+                    <p className="mt-1 text-xs text-cloud/75">
+                      18 years of growth
+                    </p>
+                  </div>
+                  <p className="font-display text-4xl font-semibold text-white">
+                    $90.0k
+                  </p>
+                </div>
+                <div className="mt-3 h-4 overflow-hidden rounded-full bg-white/10">
+                  <div className="h-full w-full rounded-full bg-green" />
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-end justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-semibold text-blue">
+                      Start at age 2
+                    </p>
+                    <p className="mt-1 text-xs text-cloud/75">
+                      16 years of growth
+                    </p>
+                  </div>
+                  <p className="font-display text-4xl font-semibold text-white">
+                    $74.5k
+                  </p>
+                </div>
+                <div className="mt-3 flex h-4 overflow-hidden rounded-full bg-white/10">
+                  <div className="h-full w-[83%] bg-blue" />
+                  <div className="h-full flex-1 bg-[repeating-linear-gradient(135deg,#d0a06f_0,#d0a06f_6px,#8f5d35_6px,#8f5d35_12px)]" />
+                </div>
+                <div className="mt-2 flex justify-end">
+                  <span className="rounded-full bg-cognac/15 px-3 py-1 text-xs font-semibold text-cognac">
+                    missed growth: ~$15.5k
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-[1.4rem] border border-[#f36b4f]/40 bg-[#1b0d0a]/75 p-5">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#f36b4f]">
+              Potential lost growth
+            </p>
+            <p className="mt-2 font-display text-5xl font-semibold text-white">
+              -$15,500
+            </p>
+            <p className="mt-3 text-base leading-7 text-cloud">
+              Money that may not be there for college simply because the plan
+              started two years later.
+            </p>
           </div>
         </div>
       </div>
@@ -224,8 +323,7 @@ export default function Home() {
       <section className="relative mx-auto grid min-h-[calc(100vh-65px)] max-w-[90rem] items-center gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[0.98fr_1.02fr] lg:py-20">
         <div className="animate-fade-up">
           <h1 className="font-display max-w-[42rem] text-5xl font-semibold leading-[1.05] text-navy sm:text-6xl lg:text-7xl">
-            Helping professionals and growing families make confident financial
-            decisions.
+            Helping you make confident financial decisions.
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate">
             Build the habits and systems that help you make confident financial
@@ -262,6 +360,8 @@ export default function Home() {
 
       <FounderSnapshot />
 
+      <ActionGapSection />
+
       <section className="px-5 py-16 sm:px-8 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <SectionIntro
@@ -273,37 +373,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-line bg-white px-5 py-14 sm:px-8 sm:py-16">
-        <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-3">
-          {painPoints.map((point) => (
-            <div
-              key={point}
-              className="rounded-3xl border border-line bg-ice p-6 text-base leading-7 text-slate shadow-sm"
-            >
-              {point}
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="px-5 py-16 sm:px-8 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <SectionIntro
             eyebrow="Who we help"
-            title="For people building real life while trying to make smart decisions."
-            body="Early momentum matters. So does having a system that still works when life gets busier."
+            title="A few moments where coaching helps."
+            body="Not every money question needs a coach. These are the moments where a clear conversation can move things forward."
           />
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            {whoWeHelp.map((group) => (
+            {scenarios.map((group) => (
               <article
                 key={group.title}
-                className="rounded-3xl border border-line bg-white p-6 shadow-sm"
+                className="border-t border-line bg-white py-6"
               >
                 <h2 className="font-display text-3xl font-semibold">
                   {group.title}
                 </h2>
                 <p className="mt-3 text-base leading-7 text-slate">
-                  {group.theme}
+                  {group.body}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {group.items.map((item) => (

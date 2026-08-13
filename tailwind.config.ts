@@ -13,6 +13,8 @@ const config: Config = {
         blue: "#0b63ce",
         sky: "#31a8e8",
         green: "#70b840",
+        leather: "#b87945",
+        cognac: "#d0a06f",
         ice: "#f5f9ff",
         cloud: "#edf4fb",
         line: "#dce8f3",
