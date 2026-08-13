@@ -47,12 +47,31 @@ const whoWeHelp = [
 ];
 
 const systemMap = [
-  "Cash flow",
-  "Savings",
-  "Benefits",
-  "Debt",
-  "Investing basics",
-  "Next decision",
+  {
+    title: "Cash flow",
+    body: "See what comes in, goes out, and gets missed.",
+    tag: "Now",
+  },
+  {
+    title: "Benefits",
+    body: "Sort through 401(k), HSA, Roth IRA, and open questions.",
+    tag: "Sort",
+  },
+  {
+    title: "Savings rhythm",
+    body: "Make the habit simple enough to repeat.",
+    tag: "Build",
+  },
+  {
+    title: "Next decision",
+    body: "Choose what matters most and what can wait.",
+    tag: "Choose",
+  },
+  {
+    title: "Follow-through",
+    body: "Leave with a short action list and review rhythm.",
+    tag: "Move",
+  },
 ];
 
 function HeroWorkspaceImage() {
@@ -118,26 +137,96 @@ function FounderSnapshot() {
 
 function SystemVisual() {
   return (
-    <div className="rounded-[2rem] border border-line bg-white p-5 shadow-soft sm:p-6">
-      <div className="rounded-[1.5rem] bg-ice p-5">
-        <div className="grid gap-3 sm:grid-cols-2">
-          {systemMap.map((item, index) => (
-            <div
-              key={item}
-              className="flex items-center gap-3 rounded-2xl border border-line bg-white px-4 py-3"
-            >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy text-xs font-semibold text-white">
-                {index + 1}
-              </span>
-              <span className="text-sm font-semibold text-navy">{item}</span>
-            </div>
-          ))}
-        </div>
-        <div className="mt-5 rounded-2xl bg-navy px-5 py-4 text-white">
-          <p className="text-sm font-semibold text-green">Output</p>
-          <p className="mt-1 text-xl font-semibold">
-            A plan you understand, with fewer loose ends.
+    <div className="relative overflow-hidden rounded-[2rem] border border-line bg-[radial-gradient(circle_at_15%_20%,rgba(11,99,206,0.12),transparent_28%),radial-gradient(circle_at_92%_18%,rgba(121,191,67,0.12),transparent_24%),linear-gradient(135deg,#ffffff_0%,#f4f9ff_100%)] p-5 shadow-soft sm:p-6">
+      <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue">
+            Financial roadmap
           </p>
+          <h3 className="mt-2 max-w-md font-display text-3xl font-semibold leading-tight text-navy">
+            From loose pieces to a clear next step.
+          </h3>
+        </div>
+        <p className="w-fit rounded-full border border-line bg-white/85 px-3 py-2 text-xs font-semibold text-slate">
+          Coaching preview
+        </p>
+      </div>
+
+      <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="rounded-[1.5rem] border border-line bg-white/85 p-5 backdrop-blur">
+          <div className="mb-5 flex items-center gap-3">
+            <div className="grid gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-line shadow-[0_0_0_3px_#eef5fb]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-line shadow-[0_0_0_3px_#eef5fb]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-line shadow-[0_0_0_3px_#eef5fb]" />
+            </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue">
+              Plan checklist
+            </p>
+          </div>
+
+          <div className="grid gap-3">
+            {systemMap.map((item, index) => (
+              <div
+                key={item.title}
+                className="grid animate-roadmap-item grid-cols-[1.75rem_1fr_auto] items-center gap-3 rounded-2xl border border-line/90 bg-white px-3 py-3 opacity-0"
+                style={{ animationDelay: `${180 + index * 420}ms` }}
+              >
+                <span
+                  className="flex h-7 w-7 animate-roadmap-check items-center justify-center rounded-lg border border-green/40 bg-green/10 text-sm font-black text-white"
+                  style={{ animationDelay: `${620 + index * 420}ms` }}
+                >
+                  ✓
+                </span>
+                <span>
+                  <span className="block text-sm font-semibold leading-tight text-navy">
+                    {item.title}
+                  </span>
+                  <span className="mt-1 block text-xs leading-5 text-slate">
+                    {item.body}
+                  </span>
+                </span>
+                <span className="hidden rounded-full bg-ice px-2.5 py-1 text-[0.68rem] font-bold text-blue sm:inline">
+                  {item.tag}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 rounded-[1.5rem] border border-line bg-white/85 p-5 backdrop-blur">
+          <div className="relative h-36 overflow-hidden rounded-[1.1rem] border border-line bg-[linear-gradient(90deg,rgba(220,232,243,0.8)_1px,transparent_1px),linear-gradient(0deg,rgba(220,232,243,0.8)_1px,transparent_1px),#ffffff] bg-[length:42px_34px]">
+            <svg
+              viewBox="0 0 240 76"
+              fill="none"
+              aria-hidden="true"
+              className="absolute inset-x-5 bottom-7 h-20 w-[calc(100%-2.5rem)] overflow-visible"
+            >
+              <path
+                d="M2 63 C45 58 58 42 88 45 C122 49 131 20 162 24 C190 27 203 13 238 9"
+                stroke="#0b63ce"
+                strokeWidth="5"
+                strokeLinecap="round"
+                className="animate-roadmap-line"
+              />
+              <path
+                d="M2 63 C45 58 58 42 88 45 C122 49 131 20 162 24 C190 27 203 13 238 9"
+                stroke="#79bf43"
+                strokeWidth="2"
+                strokeLinecap="round"
+                className="animate-roadmap-line"
+              />
+            </svg>
+          </div>
+
+          <div className="rounded-[1.1rem] bg-navy p-5 text-white">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-green">
+              Outcome
+            </p>
+            <p className="mt-2 font-display text-2xl font-semibold leading-tight">
+              A plan you understand, not a pile of tabs.
+            </p>
+          </div>
         </div>
       </div>
     </div>
