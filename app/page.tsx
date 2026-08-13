@@ -364,11 +364,20 @@ export default function Home() {
 
       <section className="px-5 py-16 sm:px-8 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-          <SectionIntro
-            eyebrow="The coaching system"
-            title="Get the picture. Build the system. Follow through."
-            body="Most people do not need more random tips. They need a simple way to see what matters and choose the next step."
-          />
+          <div className="max-w-3xl">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-blue">
+              The coaching system
+            </p>
+            <h2 className="font-display text-3xl font-semibold leading-tight text-navy sm:text-5xl">
+              <span className="block">Get the picture.</span>
+              <span className="block">Build the system.</span>
+              <span className="block">Follow through.</span>
+            </h2>
+            <p className="mt-5 text-base leading-8 text-slate sm:text-lg">
+              Most people do not need more random tips. They need a simple way
+              to see what matters and choose the next step.
+            </p>
+          </div>
           <SystemVisual />
         </div>
       </section>
